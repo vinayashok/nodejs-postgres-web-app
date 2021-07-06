@@ -1,0 +1,35 @@
+{
+  "name": "dapper-web-app",
+  "version": "1.0.0",
+  "description": "Dapper Web Application",
+  "main": "api/index.js",
+  "scripts": {
+    "test": "npm run test",
+    "server": "node src/api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinayashok/dapper-web-app.git"
+  },
+  "author": "Vinay Ashok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinayashok/dapper-web-app/issues"
+  },
+  "homepage": "https://github.com/vinayashok/dapper-web-app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "jsonwebtoken": "^8.5.1",
+    "npmlog": "^4.1.2",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

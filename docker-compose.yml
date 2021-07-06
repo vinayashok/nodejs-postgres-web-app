@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    # volumes:
+    #   - webapp-db:/var/lib/postgresql/data
+
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_SCHEMA: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: postgres
+      POOL_MAX: 5
+      POOL_MIN: 0
+      POOL_ACQUIRE: 30000
+      POOL_IDLE: 10000
+    depends_on:
+      - postgres
+    ports:
+      - '8080:8080'
+
+# volumes:
+#   webapp-db:
