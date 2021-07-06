@@ -1,7 +1,7 @@
 Setup:
 1. Clone Repo.
 2. Install docker, run it.
-3. RUN  `cd cc_VinayAshok_BackendAPI`.
+3. RUN  `cd nodejs-postgres-web-app`.
 3. RUN `docker-compose up`.
 4. Backend API is running on port 8080, the different API calls are listed below in order
 
@@ -13,10 +13,10 @@ Payload
 
 ```json
 {
-  "email": "test@axiomzen.co",
-  "password": "axiomzen",
+  "email": "alex@gmail.com",
+  "password": "alexhunt123",
   "firstName": "Alex",
-  "lastName": "Zimmerman"
+  "lastName": "Hunt"
 }
 ```
 
@@ -25,10 +25,10 @@ Example Curl Call:
 curl --location --request POST 'http://localhost:8080/api/v1/signup' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "email": "test@axiomzen.co",
-  "password": "axiomzen",
+   "email": "alex@gmail.com",
+  "password": "alexhunt123",
   "firstName": "Alex",
-  "lastName": "Zimmerman"
+  "lastName": "Hunt"
 }'
 ```
 
@@ -46,8 +46,8 @@ Payload
 
 ```json
 {
-  "email": "test@axiomzen.co",
-  "password": "axiomzen"
+  "email": "alex@gmail.com",
+  "password": "alexhunt123"
 }
 ```
 
@@ -56,8 +56,8 @@ Example Curl Call:
 curl --location --request POST 'http://localhost:8080/api/v1/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "email": "test@axiomzen.co",
-    "password": "axiomzen"
+    "email": "alex@gmail.com",
+    "password": "alexhunt123"
 }'
 ```
 
@@ -91,9 +91,9 @@ Response:
 {
   "users":[
     {
-      "email":"test@axiomzen.co",
+      "email":"alexhunt@gmail.com",
       "firstName":"Alex",
-      "lastName":"Zimmerman"
+      "lastName":"Warner"
     }
   ]
 }
@@ -115,8 +115,8 @@ Payload
 
 ```json
 {
-  "firstName": "Axiom",
-  "lastName": "Dapper"
+  "firstName": "Alex",
+  "lastName": "Hunt"
 }
 
 ```
@@ -127,8 +127,8 @@ curl --location --request PUT 'http://localhost:8080/api/v1/users' \
 --header 'x-authentication-token: some_jwt_token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "firstName": "Zen",
-    "lastName": "labs"
+    "firstName": "Alex",
+    "lastName": "Zen"
 }'
 ```
 
